@@ -12,3 +12,6 @@ Clonar o projeto no link https://github.com/GrazielaNunes/LabReceitas.git
 
 Para executar a aplicação via linha de comando:
     mvn spring-boot:run
+
+Importar no Postman o arquivo LabReceitas.postman_collection.json,
+que encontra-se na raiz do projeto para excutar os testes nas API's;
