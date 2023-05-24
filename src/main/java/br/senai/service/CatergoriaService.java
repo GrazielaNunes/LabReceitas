@@ -1,7 +1,8 @@
-package br.com.labreceitas.receitas.service;
+package br.senai.service;
 
-import br.com.labreceitas.receitas.model.Categoria;
-import br.com.labreceitas.receitas.repository.CategoriaRepository;
+
+import br.senai.model.Categoria;
+import br.senai.repository.CategoriaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

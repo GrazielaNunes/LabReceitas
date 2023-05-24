@@ -1,7 +1,8 @@
-package br.com.labreceitas.receitas.service;
+package br.senai.service;
 
-import br.com.labreceitas.receitas.model.Receita;
-import br.com.labreceitas.receitas.repository.ReceitaRepository;
+import br.senai.model.Receita;
+import br.senai.repository.CategoriaRepository;
+import br.senai.repository.ReceitaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +15,14 @@ public class ReceitaService {
     @Autowired
     private ReceitaRepository receitaRepository;
 
+    @Autowired
+    CategoriaRepository categoriaRepository;
     public Receita salvar(Receita receita) {
+        if (receita.isRestricao()){
+            if (receita.getCategoria() == null){
+                return null;
+            }
+        }
         Receita r = receitaRepository.save(receita);
         return r;
     }

@@ -1,8 +1,8 @@
-package br.com.labreceitas.receitas.controllers;
+package br.senai.controllers;
 
-import br.com.labreceitas.receitas.model.Receita;
-import br.com.labreceitas.receitas.repository.ReceitaRepository;
-import br.com.labreceitas.receitas.service.ReceitaService;
+import br.senai.repository.ReceitaRepository;
+import br.senai.service.ReceitaService;
+import br.senai.model.Receita;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,6 +24,9 @@ public class ReceitaController {
     @PostMapping
     public ResponseEntity<Receita> salvar(@RequestBody Receita receita){
         Receita r = receitaService.salvar(receita);
+        if(r == null){
+            return new ResponseEntity<>(null, HttpStatus.CONFLICT);
+        }
         return new ResponseEntity<>(r, HttpStatus.CREATED);
     }
 

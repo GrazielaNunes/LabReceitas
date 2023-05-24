@@ -1,6 +1,7 @@
-package br.com.labreceitas.receitas.repository;
+package br.senai.repository;
 
-import br.com.labreceitas.receitas.model.Categoria;
+
+import br.senai.model.Categoria;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

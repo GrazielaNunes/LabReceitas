@@ -1,7 +1,7 @@
-package br.com.labreceitas.receitas.controllers;
+package br.senai.controllers;
 
-import br.com.labreceitas.receitas.model.Categoria;
-import br.com.labreceitas.receitas.service.CatergoriaService;
+import br.senai.model.Categoria;
+import br.senai.service.CatergoriaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

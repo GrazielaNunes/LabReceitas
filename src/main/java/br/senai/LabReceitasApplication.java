@@ -1,4 +1,4 @@
-package br.com.labreceitas.receitas;
+package br.senai;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
